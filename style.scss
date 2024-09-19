@@ -1,0 +1,242 @@
+$fontText: "Kodchasan", sans-serif;
+$colorText: rgba(0, 0, 0, 1);
+
+@mixin flexbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @media (min-width:320px) and (max-width:500px) {
+        justify-content: center;
+    }
+}
+
+nav {
+    background-color: rgba(239, 238, 243, 1);
+    height: 7vh;
+    width: 99vw;
+    @include flexbox();
+    position: sticky;
+    z-index: 3;
+
+    @media (min-width:320px) and (max-width:500px) {
+        height: 46vh;
+        width: 93.3vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        height: 5vh;
+        width: auto;
+
+        @media (min-width:320px) and (max-width:500px) {
+            height: 7vh;
+        }
+    }
+}
+
+ul {
+    @include flexbox();
+    list-style: none;
+    height: 7vh;
+    width: 75vw;
+    font-family: $fontText;
+    color: $colorText;
+    font-size: 20px;
+
+    @media (min-width:320px) and (max-width:500px) {
+        margin: 0;
+        height: 30vh;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 18px;
+    }
+}
+
+main {
+    height: 90vh;
+    width: 99vw;
+    background-color: rgba(239, 238, 243, 1);
+    margin-top: 11%;
+    @include flexbox();
+    align-items: center;
+    flex-direction: column;
+
+    @media (min-width:320px) and (max-width:500px) {
+        height: 135vh;
+        width: 93.3vw;
+        margin-top: 0%;
+        justify-content: space-between;
+        align-items: center;
+
+        .mulheres {
+            display: none;
+        }
+    }
+
+    .mulheres {
+        height: auto;
+        width: 99vw;
+        position: absolute;
+        bottom: 57%;
+        z-index: 2;
+    }
+}
+
+.primeira {
+    height: 38vh;
+    width: 70vw;
+    @include flexbox();
+    justify-content: space-between;
+    margin-top: 8.5%;
+
+    @media (min-width:320px) and (max-width:500px) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1%;
+        height: 75vh;
+        width: 90vw;
+    }
+
+    img {
+        height: 36vh;
+        width: auto;
+
+        @media (min-width:320px) and (max-width:500px) {
+            height: 29vh;
+            margin: 4%;
+        }
+    }
+}
+
+.texto {
+    width: 31vw;
+    height: 30vh;
+    font-family: $fontText;
+    color: $colorText;
+    text-align: center;
+    @include flexbox();
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width:320px) and (max-width:500px) {
+        width: 90vw;
+        height: 34vh;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 400;
+        margin: 4%;
+
+        @media (min-width:320px) and (max-width:500px) {
+            font-size: 22px;
+            font-weight: 500;
+        }
+    }
+
+    p {
+        font-size: 19px;
+        font-weight: 400;
+
+        @media (min-width:320px) and (max-width:500px) {
+            width: 77vw;
+            @include flexbox();
+
+        }
+    }
+}
+
+.segunda {
+    height: 90vh;
+    width: 69vw;
+    @include flexbox();
+    justify-content: space-between;
+
+    @media (min-width:320px) and (max-width:500px) {
+        flex-direction: column;
+        width: 90vw;
+        height: 67vh;
+        position: relative;
+        margin-top: 2%;
+    }
+}
+
+.frase {
+    width: 24vw;
+    height: 20vh;
+    margin-top: 10%;
+
+    @media (min-width:320px) and (max-width:500px) {
+        width: 85vw;
+        height: 70vh;
+        margin-top: 4%;
+    }
+
+    h3 {
+        font-family: $fontText;
+        color: $colorText;
+        font-size: 22px;
+        font-weight: 400;
+
+        @media (min-width:320px) and (max-width:500px) {
+            font-size: 19px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+    }
+
+}
+
+
+.produtos {
+    width: 43vw;
+    height: 30vh;
+    @include flexbox();
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+    left: 48%;
+
+    @media (min-width:320px) and (max-width:500px) {
+        width: 90vw;
+        height: 300vh;
+        position: relative;
+        left: 0%;
+        align-items: flex-start;
+
+        .i1 {
+            position: relative;
+            left: 15%;
+
+        }
+
+        .i2 {
+            position: relative;
+            left: 30%;
+        }
+
+        .i3 {
+            position: relative;
+            top: 50%;
+            right: 42%;
+        }
+
+        .i4 {
+            position: relative;
+            top: 50%;
+            right: 16%;
+        }
+
+    }
+}
