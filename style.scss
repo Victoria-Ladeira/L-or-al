@@ -13,12 +13,6 @@ $colorText: rgba(0, 0, 0, 1);
     box-sizing: border-box;
 }
 
-body {
-    @media (min-width:320px) and (max-width:500px) {
-        justify-content: center;
-    }
-}
-
 nav {
     background-color: rgba(239, 238, 243, 1);
     height: 7vh;
@@ -29,7 +23,7 @@ nav {
 
     @media (min-width:320px) and (max-width:500px) {
         height: 46vh;
-        width: 93.3vw;
+        width: 100vw;
         flex-direction: column;
         align-items: center;
     }
@@ -73,7 +67,7 @@ main {
 
     @media (min-width:320px) and (max-width:500px) {
         height: 135vh;
-        width: 93.3vw;
+        width: 100vw;
         margin-top: 0%;
         justify-content: space-between;
         align-items: center;
